@@ -1,11 +1,11 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import 'package:versatilewebsite/design/utils/app_colors.dart';
+import 'package:versatilewebsite/design/widgets/scroll_functionality.dart';
 
 // ignore: must_be_immutable
 class NavBarDesktopWidget extends StatefulWidget {
-   String header;
+  String header;
   NavBarDesktopWidget({
     Key? key,
     required this.header,
@@ -16,31 +16,34 @@ class NavBarDesktopWidget extends StatefulWidget {
 }
 
 class _NavBarDesktopWidgetState extends State<NavBarDesktopWidget> {
-   static const AssetImage versatileLogo = AssetImage("assets/images/versatile_logo.png");
+  static const AssetImage versatileLogo =
+      AssetImage("assets/images/versatile_logo.png");
   @override
   Widget build(BuildContext context) {
+    print("rakib");
+    final w = MediaQuery.of(context).size.width;
+    final h = MediaQuery.of(context).size.height;
+
+
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       height: 70,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           const Row(
             children: [
               // SizedBox(width: 70,),
               // Icon(Icons.menu),
 
-
-
-                 SizedBox(
-                                    height: 50,
-                                    width: 50,
-                                    child: Image(image: versatileLogo),
-                                        
-                                        ),
+              SizedBox(
+                height: 50,
+                width: 50,
+                child: Image(image: versatileLogo),
+              ),
 
               Text(
-                "Versatile Labs ",
+                "  Versatile Labs ",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               )
             ],
@@ -48,13 +51,15 @@ class _NavBarDesktopWidgetState extends State<NavBarDesktopWidget> {
           // navlogo(),
           Row(
             children: [
-              navButton("Home", widget.header),
-              navButton("Services", widget.header),
-              navButton('Portfolio', widget.header),
-              navButton('About', widget.header),
-              navButton('Blog', widget.header),
+              navButton("Home", widget.header, context,0),
+              navButton("Services", widget.header, context,h*0.6),
+              navButton('Portfolio', widget.header, context,h*1.7),
+              navButton('Blog', widget.header, context,h*2.7),
+
+              navButton('About', widget.header, context,h*7),
+              // navButton('Blog', widget.header, context,h*4.5),
               SizedBox(
-                width: 40,
+                width: w <= 1000 ? 5 : 40,
               ),
 
               Container(
@@ -63,7 +68,10 @@ class _NavBarDesktopWidgetState extends State<NavBarDesktopWidget> {
                   cursor: SystemMouseCursors.click,
                   child: ElevatedButton(
                     style: borderButtonStyle,
-                    onPressed: () {},
+                    onPressed: () {
+                      Scroll().scrollToSection(h*4.6);
+            setState(() {});
+                    },
                     child: Text(
                       "Contact sales >",
                       style: TextStyle(
@@ -81,17 +89,17 @@ class _NavBarDesktopWidgetState extends State<NavBarDesktopWidget> {
     );
   }
 
-  Widget navButton(String text, String header) {
+  Widget navButton(String text, String header, w,double value) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: TextButton(
           onPressed: () {
+             Scroll().scrollToSection(value);
             setState(() {});
           },
           style: ButtonStyle(
-            // Customize the TextButton style
             foregroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
                 // Change the text color when hovered
@@ -105,7 +113,7 @@ class _NavBarDesktopWidgetState extends State<NavBarDesktopWidget> {
             ),
           ),
           child: Text(text,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
               )),
         ),

@@ -48,51 +48,74 @@ class _BlogsDesktopWidgetState extends State<BlogsDesktopWidget> {
                   height: 30,
                 ),
                 Container(
-                    height: 220,
-                    width: w * 0.80,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: const Color(0xFF191A23)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left:15,right: 15,top: 25,bottom: 15),
+                  height: 220,
+                  width: w * 0.80,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xFF191A23)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 15, right: 15, top: 25, bottom: 15),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                            Text("For a local restaurant, we \nimplemented a targeted PPC\ncampaign that resulted in a \n50% increase in website \ntraffic and a 25% increase in sales.",style: TextStyle(color:  Colors.white60),),
-                            Text("learn more....",style: TextStyle(color: Colors.green),),
-                          ],),
-                          // Divider(height: 1,),
-                          // SizedBox(width: 60,),
-                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                            Text("For a local restaurant, we \nimplemented a targeted PPC\ncampaign that resulted in a \n50% increase in website \ntraffic and a 25% increase in sales.",style: TextStyle(color:  Colors.white60,overflow: TextOverflow.ellipsis),),
-                            Text("learn more....",style: TextStyle(color: Colors.green),),
-                          ],),
-                      
-                      
-                          // SizedBox(width: 20,),
-                          Container(
-                            decoration: BoxDecoration(),
-                            child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                              Text("For a local restaurant, we \nimplemented a targeted PPC\ncampaign that resulted in a \n50% increase in website \ntraffic and a 25% increase in sales.",style: TextStyle(color:  Colors.white60,overflow: TextOverflow.ellipsis),),
-                              Text("learn more...",style: TextStyle(color: Colors.green),),
-                            ],),
-                          ),
-                      
-                      
-                      
-                      
-                      
-                      ]),
+                                Text(
+                                  "For a local restaurant, we \nimplemented a targeted PPC\ncampaign that resulted in a \n50% increase in website \ntraffic and a 25% increase in sales.",
+                                  style: TextStyle(color: Colors.white60),
+                                ),
+                                Text(
+                                  "learn more....",
+                                  style: TextStyle(color: Colors.green),
+                                ),
+                              ],
+                            ),
+                            // Divider(height: 1,),
+                            // SizedBox(width: 60,),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "For a local restaurant, we \nimplemented a targeted PPC\ncampaign that resulted in a \n50% increase in website \ntraffic and a 25% increase in sales.",
+                                  style: TextStyle(
+                                      color: Colors.white60,
+                                      overflow: TextOverflow.ellipsis),
+                                ),
+                                Text(
+                                  "learn more....",
+                                  style: TextStyle(color: Colors.green),
+                                ),
+                              ],
+                            ),
+
+                            // SizedBox(width: 20,),
+                            Container(
+                              decoration: BoxDecoration(),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                   Text(
+                                    "For a local restaurant, we \nimplemented a targeted PPC\ncampaign that resulted in a \n50% increase in website \ntraffic and a 25% increase in sales.",
+                                    style: TextStyle(
+                                        color: Colors.white60,
+                                        overflow: TextOverflow.ellipsis),
+                                  ),
+                                  Text(
+                                    "learn more...",
+                                    style: TextStyle(color: Colors.green),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ]),
                     ),
-                    
-                    )
+                  ),
+                )
               ],
             ),
           ),

@@ -24,10 +24,10 @@ class _IntroDesktopWidgetState extends State<IntroDesktopWidget> {
         children: [
           
           Positioned(
-               right: 120,
-              top: 100,
+               right: w<1200?2:120,
+              top: 70,
             child: SizedBox(
-              height: 400,
+              height: w<1200?300:400,
               width: 400,
               child: const Align(
                 alignment: Alignment.topCenter,
@@ -45,7 +45,7 @@ class _IntroDesktopWidgetState extends State<IntroDesktopWidget> {
 
           Positioned(
             left: 55,
-              top: 100,
+              top: 50,
             child: SizedBox(
                height: 400,
                 width: 550,
@@ -66,7 +66,7 @@ class _IntroDesktopWidgetState extends State<IntroDesktopWidget> {
 
                   Text("We Shape the\nPerfect Solutions",style: TextStyle(fontFamily:"Poppins",fontSize: 50 ),),
                   SizedBox(height:10 ,),
-                  Text("Versatile labs is a custom mobile app and website development company that has been helping clients all over the world to reach their goals since 2023. Start growing your business with us 👇",style: TextStyle(color: const Color.fromARGB(255, 50, 47, 47),fontSize: 17 ),),
+                  Text("Versatile labs is a custom mobile app and website\ndevelopment company that has been helping clients \nall over the world to reach their goals since 2023.\nStart growing your business with us 👇",style: TextStyle(color: const Color.fromARGB(255, 50, 47, 47),fontSize: 17 ),),
 
                    SizedBox(height:20 ,),
 

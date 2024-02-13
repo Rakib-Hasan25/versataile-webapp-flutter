@@ -209,11 +209,9 @@ class _ContactUsDesktopState extends State<ContactUsDesktop> {
               right: 3,
               bottom: 700,
               child: SizedBox(
-                height: 400,
-                width: 400,
-                child: Align(
-                    alignment: Alignment.topCenter,
-                    child: Image.asset("assets/images/Illustration1.png")),
+                height: w<1200?300:400,
+                width: w<1200?300:400,
+                child: Image.asset("assets/images/Illustration1.png"),
               ),
             ),
             Positioned(
@@ -281,7 +279,7 @@ class _ContactUsDesktopState extends State<ContactUsDesktop> {
                                     style: textstyle()),
                               ],
                             ),
-                            Row(
+                           if(w>1200) Row(
                               children: [
                                 SizedBox(
                                     height: 30,

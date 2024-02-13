@@ -76,7 +76,7 @@ class _ProtfolioDesktopWidgetState extends State<ProtfolioDesktopWidget> {
           ),
           Positioned(
             bottom: 80,
-            right: 100,
+            right: w<1200?20:100,
             child: Container(
               height: 70,
               width: 200,

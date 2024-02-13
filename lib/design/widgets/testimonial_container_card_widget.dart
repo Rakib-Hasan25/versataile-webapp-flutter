@@ -25,8 +25,8 @@ class TestimonialContainerCard extends StatelessWidget {
                                   Row(
                                     children: [
                                       Container(
-                                        width: 80, // Set the desired width
-                                        height: 80, // Set the desired height
+                                        width: w<1200?50:80, // Set the desired width
+                                        height: w<1200?50:80, // Set the desired height
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                         ),
@@ -62,8 +62,8 @@ class TestimonialContainerCard extends StatelessWidget {
                                     ],
                                   ),
                                   SizedBox(
-                                    height: 50,
-                                    width: 50,
+                                    height: w<1200?30:50,
+                                    width: w<1200?50:40,
                                     child: Image.asset(
                                       "assets/images/versatile_logo.png",
                                       fit: BoxFit.cover,

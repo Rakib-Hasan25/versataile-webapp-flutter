@@ -30,11 +30,11 @@ class _HightlightContainerState extends State<HightlightContainer> {
       onEnter: (_) => setState(() => isHovered = true),
       onExit: (_) => setState(() => isHovered = false),
       child: AnimatedContainer(
-        width: w / 2.6,
+        width: w<1200?w / 2.6:w/2.6,
         height: 265,
         transform: isHovered ? hoverTransform : nonHoverTransform,
         duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         decoration: BoxDecoration(
             color: widget.backgroundColor,
             borderRadius: BorderRadius.circular(15),
@@ -47,19 +47,21 @@ class _HightlightContainerState extends State<HightlightContainer> {
           padding: const EdgeInsets.all(15.0),
           child: Flexible(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(
-                      widget.topic,
-                      style: const TextStyle(
-                        overflow: TextOverflow.ellipsis,
-                          fontSize: 26,
-                          height: 1.4,
-                          fontWeight: FontWeight.w600),
+                    FittedBox(
+                        fit: BoxFit.scaleDown,
+                      child: Text(
+                        widget.topic,
+                        style: TextStyle(
+                            fontSize: w>1200?33:20,
+                            height: 1.4,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ),
                     const SizedBox(height: 10),
                     Row(
@@ -82,8 +84,8 @@ class _HightlightContainerState extends State<HightlightContainer> {
                   ],
                 ),
                Container(
-                          height: 80,
-                          width: 80,
+                          height: w>1200?125:90,
+                          width: 130,
                           child: Image.asset(widget.imagePath,fit: BoxFit.fitHeight,))
               ],
             ),
