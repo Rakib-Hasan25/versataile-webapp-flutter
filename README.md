@@ -1,16 +1,29 @@
-# versatilewebsite
+# versataile-webapp-flutter
 
-A new Flutter project.
 
-## Getting Started
+# About
+- An web app UI design using Flutter.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Features
+- A beautiful Ui design of a landing page  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Used
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ - Flutter
+ - Dart
+ - go-router (routing)
+
+## Demo
+
+[![webapp demo](http://img.youtube.com/vi/9aZWzHpRdcEZesRE/0.jpg)](https://youtu.be/PsXDYSbLX9c?si=9aZWzHpRdcEZesRE)
+
+Click on the image above to watch the video.
+
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at mdhasanrakib65@gmail.com
+
+
