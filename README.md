@@ -2,7 +2,7 @@
 
 
 # About
-- An web app UI design using Flutter.
+- A web app UI design using Flutter.
 
 
 ### Features
